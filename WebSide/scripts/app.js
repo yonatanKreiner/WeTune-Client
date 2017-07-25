@@ -10,7 +10,7 @@
  */
 angular
   .module('weTuneApp', [
-    'ngRoute'
+    'ngRoute', 'firebase'
   ])
   .config(function ($routeProvider, $locationProvider) {
     $routeProvider

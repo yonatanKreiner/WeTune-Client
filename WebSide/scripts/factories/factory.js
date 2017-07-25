@@ -14,4 +14,8 @@ angular.module('weTuneApp')
 					messagingSenderId: "440789496733",
 				};
 			return firebase.initializeApp(config);
-	});
+	})
+
+	.factory("Database", ["Firebase",  function (Firebase) {
+	return Firebase.database();
+}]);

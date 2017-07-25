@@ -1,4 +1,4 @@
-var mainApp = angular.module("mainApp", []);
+var mainApp = angular.module("weTuneApp");
 
 mainApp.service('RoomService', function(){
 	this.login = function(name, pin) {
