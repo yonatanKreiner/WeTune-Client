@@ -1,1 +1,26 @@
-play shit
+<div class="row">
+	<div class="col-md-4 col-md-offset-7 room-details">
+	<b>	שם החדר: </b> &nbsp; {{main.name}} <br>
+	<b>	קוד: </b> &nbsp; {{main.code}}
+		</div>
+</div>
+
+<div class="row">
+
+	<!--Song List-->
+	<div class="col-md-4 page songs">
+		<div ng-repeat ="song in songs">
+				
+			</div>
+	</div>
+
+		<!--YouTube Player-->
+		<iframe class = "col-md-8 page player" ng-src="{{main.src}}" frameborder="0"></iframe>
+	</div>
+
+<div class="row">
+		<!--User List-->
+		<div class="users">
+
+		</div>
+	</div>
