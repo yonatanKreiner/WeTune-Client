@@ -12,7 +12,7 @@ angular
   .module('weTuneApp', [
     'ngRoute'
   ])
-  .config(function ($routeProvider) {
+  .config(function ($routeProvider, $locationProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
@@ -27,4 +27,5 @@ angular
       .otherwise({
         redirectTo: '/'
       });
+			$locationProvider.html5Mode(false).hashPrefix('');
   });
