@@ -16,14 +16,17 @@
 }
 .songs{
 	background: white;
-}
-
-.player{
-	width: 100%;
+	direction: rtl;
 }
 
 .users{
 	background: white;
 	height: 20vh;
 	margin-top: 5vh;
+}
+
+.thumb{
+	width: 60px;
+	height: 60px;
+	float: left;
 }

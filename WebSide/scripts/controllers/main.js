@@ -8,12 +8,20 @@
  * Controller of the weTuneApp
  */
 angular.module('weTuneApp')
-  .controller('MainCtrl', function ($sce) {
+  .controller('MainCtrl', function ($scope, $sce, Database, RoomService) {
 	var vm = this;
-	vm.name = "סוליסול";
+	vm.name = "tempor";
 	vm.code = "1234";
-	vm.src = $sce.trustAsResourceUrl("https://www.youtube.com/embed/ebXbLfLACGM");
+	//vm.name = RoomService.name;
+	//vm.pin = RoomService.pin;
+	vm.src = $sce.trustAsResourceUrl("https://www.youtube.com/embed/" + "cxG-kOTMgaA");
 
+var db2 = Database.ref("rooms/" + vm.name + "/songs").on("value", function(data){
+	vm.songs = data.val();
+	if ($scope.$root.$$phase != '$apply' && $scope.$root.$$phase != '$digest') {
+		$scope.$apply();
+	}
+	console.log(vm.songs);
+});
 
-	vm.songs;
   });
