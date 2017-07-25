@@ -8,7 +8,11 @@
  * Controller of the weTuneApp
  */
 angular.module('weTuneApp')
-  .controller('LoginCtrl', function ($scope) {
+  .controller('LoginCtrl', function ($scope, $location) {
+		$scope.room = {
+			exists: true
+		};
+
 		$scope.enterRoom = function(room) {
 			if (room.exists) {
 				$scope.loginRoom(room.name, room.pin);
@@ -19,17 +23,17 @@ angular.module('weTuneApp')
 
     $scope.createRoom = function(name, pin) {
 			if (name === 'room1' && pin === '1234') {
-				alert('create');
+				$location.path('/main')
 			} else {
-				alert('fail');
+				$scope.error = 'fail'
 			}
 		}
 
 		$scope.loginRoom = function(name, pin) {
 			if (name === 'room2' && pin === '1235') {
-				alert('login');
+				$location.path('/main')
 			} else {
-				alert('fail');
+				$scope.error = 'fail'
 			}
 		}
   });

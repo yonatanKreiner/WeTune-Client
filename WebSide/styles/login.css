@@ -4,6 +4,12 @@ body {
   background-color: #eee;
 }
 
+.btn-radio > input[type=radio] {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  pointer-events: none;
+}
+
 .form-signin {
   max-width: 330px;
   padding: 15px;
