@@ -9,18 +9,19 @@
 
 	<!--Song List-->
 	<div class="col-md-4 page songs">
-		<div ng-repeat="song in main.songs">
+		<div ng-repeat="song in main.songs" class="song">
 			<img class="thumb" src="{{song.thumb}}"></img>
-			<p>{{song.name}}</p>
+			<p class="song-name">{{song.name}}</p>
+			<p> {{song.requester}}</p>
 			<p>{{song.length}}</p>
-			<p>{{song.requester}}</p>
-			<p>qwe</p>
 		</div>
 	</div>
 
 		<!--YouTube Player-->
-		<iframe class = "col-md-8 page" ng-src="{{main.src}}" frameborder="0"></iframe>
-	</div>
+		<!--iframe id="" class = "col-md-8 page" ng-src="{{main.src}}" frameborder="0"i></iframe-->
+		<youtube-video class="player" video-id="{{main.src}}"></youtube-video>
+
+</div>
 
 <div class="row">
 		<!--User List-->

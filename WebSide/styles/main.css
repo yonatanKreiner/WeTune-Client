@@ -15,10 +15,18 @@
 		height: 50vh;
 }
 .songs{
-	background: white;
 	direction: rtl;
+	overflow-y:auto;
+ 
 }
 
+.song{
+	border: 2px solid white;
+	height: 100px;
+}
+.song-name{
+	font-size: 20px;
+}
 .users{
 	background: white;
 	height: 20vh;
@@ -26,7 +34,7 @@
 }
 
 .thumb{
-	width: 60px;
-	height: 60px;
+	width: 120px;
+	height: 90px;
 	float: left;
 }
