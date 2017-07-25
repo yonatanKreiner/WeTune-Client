@@ -13,6 +13,11 @@ export const schema = {
 						"unique": true,
 						"faker": "name.firstName"
 					},
+					"pin": {
+						"type": "number",
+						"minimum": 0,
+						"maximum": 9999
+					},
 					"users": {
 							"type": "array",
 							"minItems": 3,
@@ -35,7 +40,7 @@ export const schema = {
 									"unique": true
 								},
 								"length": {
-									"type": "integer",
+									"type": "number",
 									"minimum": 1,
 									"maximum": 5
 								},

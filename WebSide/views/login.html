@@ -1,1 +1,16 @@
-<p>This is the login view.</p>
+<link href="./styles/login.css" rel="stylesheet">
+<div class="form-signin">
+	<center><h2 class="form-signin-heading">כניסה לחדר</h2>
+	<input type="text" id="inputName" class="form-control" placeholder="שם חדר" ng-model="room.name" required autofocus>
+	<input type="password" id="inputPin" class="form-control" placeholder="קוד" ng-model="room.pin" required>
+	<div class="btn-group" data-toggle="buttons">
+		<label class="btn btn-primary">
+			<input type="radio" id="new" autocomplete="off" ng-model="room.exists" value="false">חדש
+		</label>
+		<label class="btn btn-primary active">
+			<input type="radio" id="exists" autocomplete="off" ng-model="room.exists" value="true" checked>קיים
+		</label>
+	</div>
+	</center><br />
+	<button class="btn btn-lg btn-primary btn-block" ng-click="enterRoom(room)">Sign in</button>
+</div>
