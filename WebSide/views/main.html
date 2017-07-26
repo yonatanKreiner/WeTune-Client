@@ -13,7 +13,7 @@
 			<img class="thumb" src="{{song.thumb}}"></img>
 			<p class="song-name">{{song.name}}</p>
 			<p> {{song.requester}}</p>
-			<p>{{song.length}}</p>
+			<p>{{buildTimeFormat(song.length)}}</p>
 		</div>
 	</div>
 			<youtube-video video-id=main.src player="main.myplayer"></youtube-video>
