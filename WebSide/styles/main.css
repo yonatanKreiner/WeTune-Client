@@ -25,7 +25,7 @@
 	background: black;
 	max-height: 170px;
 	border: 1px solid gray;
-	opacity: 0.8;
+	opacity: 0.6;
 }
 
 .thumb{
@@ -53,12 +53,18 @@
 	right: 0;
 }
 
-
 .room-details{
 	float: right;
 	margin: 0 !important;
-	font-size: 20px;
+	margin-right: 120px !important;
+	margin-top: 50px !important;
+	font-size: 70px;
 	direction: rtl;
-	color: black
+	color: white
+}
 
+#qr {
+	margin-top: 50px;
+	margin-left: 50px;
+	float: left;
 }
