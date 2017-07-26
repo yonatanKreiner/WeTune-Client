@@ -86,11 +86,14 @@ angular.module('weTuneApp')
 		}
 
 		$scope.createRoom = function(roomName, roomPin) {
+			defaultRoom.name = roomName;
+			defaultRoom.pin = roomPin;
+
 			var room = defaultRoom;
-		  room.name = roomName;
-		  room.pin = roomPin;
+
+			console.log(room);
 			
-			var db = Database.ref("rooms/" + roomName).push();
-			db.set(room);
+			var db = Database.ref();
+			db.child("rooms/" + roomName).set(room);
 		}
   });
