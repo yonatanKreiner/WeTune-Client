@@ -22,17 +22,23 @@
     <script src="https://www.gstatic.com/firebasejs/3.0.3/firebase.js"></script>
 
     <!-- AngularFire -->
-    
-  </head>
-  <body ng-app="weTuneApp" style="background:red">
-  
+    <script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
 
+    <!-- bootstrap-pincode-input -->
+		<script src="../node_modules/bootstrap-pincode-input/js/bootstrap-pincode-input.js"></script>
+		<link rel="stylesheet" href="../node_modules/bootstrap-pincode-input/css/bootstrap-pincode-input.css"></script>
+  </head>
+  <body ng-app="weTuneApp">
+		<div class="page-bg">
+		</div>
     <div class="container">
     	<div ng-view=""></div>
     </div>
 
 		<!-- Styles -->
+    <link rel="stylesheet" href="styles/login.css">
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="./index.css">
 
 		<!-- Application -->
 		<script src="scripts/app.js"></script>
@@ -49,6 +55,5 @@
 		<!-- Include YT library and this directive -->
 		<script src="https://www.youtube.com/iframe_api"></script>
 		<script src="../node_modules/angular-youtube-embed/src/angular-youtube-embed.js"></script>
-
 </body>
 </html>

@@ -9,6 +9,8 @@
  */
 angular.module('weTuneApp')
   .controller('LoginCtrl', function ($scope, $location, Database, RoomService) {
+		// $('#inputPin').pincodeInput({inputs:4});
+
 		var defaultRoom = {
 			name: '',
 			pin: '',

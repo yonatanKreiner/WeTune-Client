@@ -1,15 +1,19 @@
 <link href="./styles/login.css" rel="stylesheet">
-<div class="form-signin">
-	<center><h2 class="form-signin-heading">כניסה לחדר</h2>
-	<input type="text" id="inputName" class="form-control" placeholder="שם חדר" ng-model="room.name" required autofocus>
-	<input type="password" id="inputPin" class="form-control" placeholder="קוד" ng-model="room.pin" required>
-	<div class="btn-group">
-		<button class="btn btn-primary" ng-class="room.exists ? '' : 'active'" 
-			type="radio" ng-click="room.exists = false">חדש
-		<button class="btn btn-primary" ng-class="room.exists ? 'active' : ''" 
-			type="radio" ng-click="room.exists = true" checked>קיים
-	</div>
-	</center><br />
-	<button class="btn btn-lg btn-primary btn-block" ng-click="enterRoom(room)">Sign in</button><br />
-	{{error}}
+<div class="form-signin row">
+	<center>
+		<img id='logo' src="./images/logo.png" />
+		<h2 class="form-signin-heading">כניסה לחדר</h2>
+		<input type="text" id="inputName" class="form-control" placeholder="שם חדר" ng-model="room.name" required autofocus><br />
+		<input type="password" id="inputPin" class="form-control" placeholder="קוד" ng-model="room.pin" required>
+		<!--<input type="text" name="mycode" id="inputPin" class="form-control" ng-model="room.pin" required><br />-->
+		<br/>
+		<div class="btn-group">
+			<button class="btn btn-primary" ng-class="room.exists ? '' : 'active'" 
+				type="radio" ng-click="room.exists = false">חדש
+			<button class="btn btn-primary" ng-class="room.exists ? 'active' : ''" 
+				type="radio" ng-click="room.exists = true" checked>קיים
+		</div>
+		<button id="signin" class="btn btn-lg btn-primary btn-block" ng-click="enterRoom(room)">הכנס לחדר</button><br />
+	</center>
+	<div class="alert alert-danger" role="alert">{{error}}</div>
 </div>
