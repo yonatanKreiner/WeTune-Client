@@ -4,7 +4,7 @@
   "main": "index.js",
   "repository": "https://gitlab.com/WeTune/WeTune-App.git",
   "scripts": {
-    "generate-mock-data": "babel-node ./generateMockData"
+		"start": "now"
   },
   "babel": {
     "presets": [
@@ -44,5 +44,8 @@
     "eslint-plugin-import": "^2.7.0",
     "eslint-watch": "^3.1.2",
     "json-schema-faker": "^0.5.0-rc10"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.0.2"
   }
 }
