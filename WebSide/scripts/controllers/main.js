@@ -76,4 +76,9 @@ $scope.$on('youtube.player.ready', function ($event, player) {
 		return (totalseconds);
 	}
 
+		$scope.buildTimeFormat = function(time) {
+		var string = time.toString();
+		return '' + string.substring(0, string.indexOf('.')) + ':' + string.substring(string.indexOf('.') + 1, string.indexOf('.') + 3) + '';
+	};
+
   });
