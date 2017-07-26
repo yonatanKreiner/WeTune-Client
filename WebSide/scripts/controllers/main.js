@@ -10,10 +10,10 @@
 angular.module('weTuneApp')
   .controller('MainCtrl', function ($scope, $sce, Database, RoomService) {
 	var vm = this;
-	vm.name = "room5";
-	vm.code = "1234";
-	//vm.name = RoomService.name;
-	//vm.pin = RoomService.pin;
+	//vm.name = "room5";
+	//vm.code = "1234";
+	vm.name = RoomService.name;
+	vm.pin = RoomService.pin;
 	vm.src = "XIMLoLxmTDw";
 
 

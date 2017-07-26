@@ -64,7 +64,7 @@ angular.module('weTuneApp')
 		$scope.checkRoom = function(roomName, roomPin, callback) {
 			Database.ref("rooms/" + roomName).on("value", function(room){
 				if (room.val()) {
-					callback(room.val().pin == roomPin);
+					callback(null, room.val().pin == roomPin);
 				} else {
 					callback(null, false);
 				}
