@@ -1,40 +1,57 @@
 .container{
 	width: 100vw !important;
+	padding: 0 !important; 
 }
+
+.main{
+background-image: url('../images/player_wallpaper.jpeg');
+background-size: cover;
+height: 100vh;
+width: 100vw;
+/*color: black !important;*/
+}
+
 .room-details{
 	background: white;
-	height: 10vh;
-	margin-bottom: 5vh;
-	margin-top: 5vh;
-	border-radius: 10px;
-	padding: 1%;
+	height: 20vh;
+	width: 65vw;
+	padding: 2%;
 	font-size: 20px;
 	direction: rtl;
+	color: black;
+
 }
-.page{
-		height: 50vh;
-}
+
 .songs{
-	direction: rtl;
-	overflow-y:auto;
- 
+ direction: rtl;
+ overflow-y:auto;
+ float: left;
+ height: 100vh;
+ padding: 2px;;
+ border: 2px solid gray;
+ width: 35vw;
 }
 
 .song{
-	border: 2px solid white;
-	height: 100px;
+	height: 150px;
+	padding: 1%;
 }
 .song-name{
 	font-size: 20px;
-}
-.users{
-	background: white;
-	height: 20vh;
-	margin-top: 5vh;
 }
 
 .thumb{
 	width: 120px;
 	height: 90px;
 	float: left;
+}
+
+.youtube{
+	float: right;
+	position: absolute;
+	right: 0;
+	top: 0;
+  padding: 0;
+height: 60vh;
+width: 65vw;
 }

@@ -1,4 +1,8 @@
+@font-face{
+        font-family: alef;
+        src:url("/media/Alef.ttf");
+}
 body {
-  font-family: "Arial";
-  color: #fff;
+	font-family: "david";	
+	color: #fff;
 }

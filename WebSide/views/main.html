@@ -1,28 +1,19 @@
-<div class="row">
-	<div class="col-md-4 col-md-offset-7 room-details">
-	<b>	שם החדר: </b> &nbsp; {{main.name}} <br>
-	<b>	קוד: </b> &nbsp; {{main.pin}}
-		</div>
-</div>
+<div class="main">
+			<!--img id='logo' src="./images/logo.png" /-->
 
-<div class="row">
-
-	<!--Song List-->
-	<div class="col-md-4 page songs">
+	<div class="page songs">
 		<div ng-repeat="song in main.songs" class="song">
-			<img class="thumb" src="{{song.thumb}}"></img>
+			<img class="thumb" ng-src="{{song.thumb || 'https://1.bp.blogspot.com/-eoZUK337wkQ/V0SZt1ObDOI/AAAAAAAADuo/qO81W8h4OjE0lfwb2LEJpn6sNn2gXmTPwCLcB/s1600/Song.png'}}">
 			<p class="song-name">{{song.name}}</p>
 			<p> {{song.requester}}</p>
 			<p>{{buildTimeFormat(song.length)}}</p>
 		</div>
 	</div>
-			<youtube-video video-id=main.src player="main.myplayer"></youtube-video>
-
+	<youtube-video class="youtube" video-id=main.src player="main.myplayer"></youtube-video>
+<br>
+	<div class=" room-details">
+		<b>	שם החדר: </b> &nbsp; {{main.name}} <br>
+		<b>	קוד: </b> &nbsp; {{main.pin}}
 </div>
 
-<div class="row">
-		<!--User List-->
-		<div class="users">
-
-		</div>
 	</div>

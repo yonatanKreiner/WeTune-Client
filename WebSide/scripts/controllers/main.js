@@ -10,22 +10,22 @@
 angular.module('weTuneApp')
   .controller('MainCtrl', function ($scope, $sce, $location, Database, RoomService) {
 	var vm = this;
-
-	if (!RoomService.name || !RoomService.pin) {
-		$location.path('/');
-		if(!$scope.$$phase) $scope.$apply();
-	}
-	//vm.name = "room5";
-	//vm.code = "1234";
-	vm.name = RoomService.name;
-	vm.pin = RoomService.pin;
+	// if (!RoomService.name || !RoomService.pin) {
+	// 	$location.path('/');
+	// 	if(!$scope.$$phase) $scope.$apply();
+	// }
+	vm.name = "pulse";
+	vm.pin = "1234";
+	//vm.name = RoomService.name;
+	//vm.pin = RoomService.pin;
 	vm.src = "XIMLoLxmTDw";
 
-
-
+	
 Database.ref("rooms/" + vm.name + "/volume").on("value", function(data){
 	console.log(1);
-	vm.player.setVolume(data.val());
+	if(vm.player){
+		vm.player.setVolume(data.val());
+	}
 });
 
 Database.ref("rooms/" + vm.name + "/status").on("value", function(data){
@@ -33,7 +33,7 @@ Database.ref("rooms/" + vm.name + "/status").on("value", function(data){
 	if(data.val() && vm.player)
 		{
 			vm.player.playVideo();
-		}else{
+		}else if(vm.player){
 			vm.player.pauseVideo();
 		}
 });
@@ -55,6 +55,13 @@ $scope.$on('youtube.player.ready', function ($event, player) {
   })
 
   $scope.$on('youtube.player.ended', function ($event, player) {
+		console.log(Object.keys(vm.songs)[0]);
+		Database.ref("rooms/" + vm.name + "/songs").child(Object.keys(vm.songs)[0]).remove();
+		vm.src = vm.songs[Object.keys(vm.songs)[0]].url;
+			player.playVideo();
+	});
+		
+	  $scope.$on('youtube.player.error', function ($event, player) {
 		console.log(Object.keys(vm.songs)[0]);
 		Database.ref("rooms/" + vm.name + "/songs").child(Object.keys(vm.songs)[0]).remove();
 		vm.src = vm.songs[Object.keys(vm.songs)[0]].url;
