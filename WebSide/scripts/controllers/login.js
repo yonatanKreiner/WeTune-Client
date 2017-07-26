@@ -42,12 +42,11 @@ angular.module('weTuneApp')
 					$scope.error = err.message;
 				} else if(doesExist) {
 					$scope.error = 'room already exists'
+					if(!$scope.$$phase) $scope.$apply();					
 				} else {
 					$scope.createRoom(name, pin);
 					$scope.redirectToRoom(name, pin);
 				}
-
-				if(!$scope.$$phase) $scope.$apply();
 			}));
 		}
 

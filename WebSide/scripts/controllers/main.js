@@ -8,8 +8,13 @@
  * Controller of the weTuneApp
  */
 angular.module('weTuneApp')
-  .controller('MainCtrl', function ($scope, $sce, Database, RoomService) {
+  .controller('MainCtrl', function ($scope, $sce, $location, Database, RoomService) {
 	var vm = this;
+
+	if (!RoomService.name || !RoomService.pin) {
+		$location.path('/');
+		if(!$scope.$$phase) $scope.$apply();
+	}
 	//vm.name = "room5";
 	//vm.code = "1234";
 	vm.name = RoomService.name;
