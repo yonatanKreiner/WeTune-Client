@@ -10,16 +10,6 @@ height: 100vh;
 width: 100vw;
 }
 
-.room-details{
-	background: white;
-	height: 20vh;
-	width: 25vw;
-	padding: 2%;
-	font-size: 20px;
-	direction: rtl;
-	color: black
-}
-
 .songs{
  direction: rtl;
  overflow-y:auto;
@@ -50,4 +40,24 @@ width: 100vw;
   padding: 0;
 	height: 60vh;
 	width: 65vw;
+}
+
+.extra{
+	padding: 0;
+	width: 65vw;
+	height: 40vh;
+	position: absolute;
+	margin: 0 !important;
+	bottom: 0;
+	right: 0;
+}
+
+
+.room-details{
+	float: right;
+	margin: 0 !important;
+	font-size: 20px;
+	direction: rtl;
+	color: black
+
 }
