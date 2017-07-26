@@ -4,11 +4,10 @@
 }
 
 .main{
-background-image: url('../images/player_wallpaper.jpeg');
-background-size: cover;
-height: 100vh;
-width: 100vw;
-/*color: black !important;*/
+	background-image: url('../images/player_wallpaper.jpeg');
+	background-size: cover;
+	height: 100vh;
+	width: 100vw;
 }
 
 .room-details{
@@ -19,17 +18,16 @@ width: 100vw;
 	font-size: 20px;
 	direction: rtl;
 	color: black;
-
 }
 
 .songs{
- direction: rtl;
- overflow-y:auto;
- float: left;
- height: 100vh;
- padding: 2px;;
- border: 2px solid gray;
- width: 35vw;
+	direction: rtl;
+	overflow-y:auto;
+	float: left;
+	height: 100vh;
+	padding: 2px;;
+	border: 2px solid gray;
+	width: 35vw;
 }
 
 .song{
@@ -52,6 +50,6 @@ width: 100vw;
 	right: 0;
 	top: 0;
   padding: 0;
-height: 60vh;
-width: 65vw;
+	height: 60vh;
+	width: 65vw;
 }
