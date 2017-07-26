@@ -41,9 +41,6 @@ $scope.$on('youtube.player.ready', function ($event, player) {
 
 		Database.ref("rooms/" + vm.name + "/songs").on("value", function(data){
 			vm.songs = data.val();
-			vm.songs.map(function(item) {
-				item.length = $scope.convertISO8601ToSeconds(item.length) / 60;
-			});
 			vm.src = vm.songs[Object.keys(vm.songs)[0]].url;
 			player.playVideo();
 		if ($scope.$root.$$phase != '$apply' && $scope.$root.$$phase != '$digest') {
