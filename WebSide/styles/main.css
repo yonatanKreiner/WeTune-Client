@@ -4,20 +4,20 @@
 }
 
 .main{
-background-image: url('../images/player_wallpaper.jpeg');
-background-size: cover;
-height: 100vh;
-width: 100vw;
+	background-image: url('../images/player_wallpaper.jpeg');
+	background-size: cover;
+	height: 100vh;
+	width: 100vw;
 }
 
 .songs{
- direction: rtl;
- overflow-y:auto;
- float: left;
- height: 100vh;
- padding: 3px;;
- border: 1px solid gray;
- width: 35vw;
+	direction: rtl;
+	overflow-y:auto;
+	float: left;
+	height: 100vh;
+	padding: 3px;;
+	border: 1px solid gray;
+	width: 35vw;
 }
 
 .card{
@@ -27,6 +27,7 @@ width: 100vw;
 	border: 1px solid gray;
 	opacity: 0.8;
 }
+
 .thumb{
 	width: 120px;
 	height: 90px;
