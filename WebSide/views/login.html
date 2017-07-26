@@ -5,7 +5,6 @@
 <div class="form-signin row">
 	<center>
 		<img id='logo' src="./images/logo.png" /><br /><br />
-		<h2 class="form-signin-heading">כניסה לחדר</h2>
 		<input type="text" id="inputName" class="form-control" placeholder="שם חדר" ng-model="room.name" required autofocus><br />
 		<input type="text" maxlength=4 minlength=4 id="inputPin" class="form-control" placeholder="קוד" ng-model="room.pin" required>
 		<br/><br />
@@ -15,7 +14,7 @@
 			<button class="btn btn-primary" ng-class="room.exists ? 'active' : ''" 
 				type="radio" ng-click="room.exists = true" checked>קיים
 		</div><br /><br />
-		<button id="signin" class="btn btn-stroked-light js-button-hero-get-premium" ng-click="enterRoom(room)">הכנס לחדר</button><br />
+		<button id="signin" class="btn btn-stroked-light js-button-hero-get-premium" ng-click="enterRoom(room)">הכנס לחדר</button><br /><br />
 		<div class="alert alert-danger" role="alert" ng-show="error">{{error}}</div>
 	</center>
 </div>
