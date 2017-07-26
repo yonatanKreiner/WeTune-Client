@@ -10,7 +10,7 @@
  */
 angular
   .module('weTuneApp', [
-    'ngRoute', 'firebase'
+    'ngRoute', 'firebase','youtube-embed'
   ])
   .config(function ($routeProvider, $locationProvider) {
     $routeProvider
