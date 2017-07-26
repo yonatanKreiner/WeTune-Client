@@ -3,17 +3,20 @@
 
 	<div class="page songs">
 		<div ng-repeat="song in main.songs" class="song">
+			<div class="card">
 			<img class="thumb" ng-src="{{song.thumb || 'https://1.bp.blogspot.com/-eoZUK337wkQ/V0SZt1ObDOI/AAAAAAAADuo/qO81W8h4OjE0lfwb2LEJpn6sNn2gXmTPwCLcB/s1600/Song.png'}}">
-			<p class="song-name">{{song.name}}</p>
+			<p class="song-name" style="margin:0"><b>{{song.name}}</b></p>
 			<p> {{song.requester}}</p>
-			<p>{{buildTimeFormat(song.length)}}</p>
+			<p style="margin:0">{{buildTimeFormat(song.length)}}</p>
+			</div>
 		</div>
 	</div>
 	<youtube-video class="youtube" video-id=main.src player="main.myplayer"></youtube-video>
 <br>
-	<div class=" room-details">
+<center>
+	<div class="room-details">
 		<b>	שם החדר: </b> &nbsp; {{main.name}} <br>
 		<b>	קוד: </b> &nbsp; {{main.pin}}
 </div>
-
+</center>
 	</div>

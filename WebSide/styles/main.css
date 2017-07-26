@@ -8,18 +8,16 @@ background-image: url('../images/player_wallpaper.jpeg');
 background-size: cover;
 height: 100vh;
 width: 100vw;
-/*color: black !important;*/
 }
 
 .room-details{
 	background: white;
 	height: 20vh;
-	width: 65vw;
+	width: 25vw;
 	padding: 2%;
 	font-size: 20px;
 	direction: rtl;
-	color: black;
-
+	color: black
 }
 
 .songs{
@@ -27,19 +25,18 @@ width: 100vw;
  overflow-y:auto;
  float: left;
  height: 100vh;
- padding: 2px;;
- border: 2px solid gray;
+ padding: 3px;;
+ border: 1px solid gray;
  width: 35vw;
 }
 
-.song{
-	height: 150px;
-	padding: 1%;
+.card{
+	padding: 10px 15px 10px 4px;
+	background: black;
+	max-height: 170px;
+	border: 1px solid gray;
+	opacity: 0.8;
 }
-.song-name{
-	font-size: 20px;
-}
-
 .thumb{
 	width: 120px;
 	height: 90px;
@@ -47,11 +44,10 @@ width: 100vw;
 }
 
 .youtube{
-	float: right;
 	position: absolute;
 	right: 0;
 	top: 0;
   padding: 0;
-height: 60vh;
-width: 65vw;
+	height: 60vh;
+	width: 65vw;
 }
