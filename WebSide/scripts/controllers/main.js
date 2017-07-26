@@ -24,10 +24,12 @@ angular.module('weTuneApp')
 
 
 Database.ref("rooms/" + vm.name + "/volume").on("value", function(data){
+	console.log(1);
 	vm.player.setVolume(data.val());
 });
 
 Database.ref("rooms/" + vm.name + "/status").on("value", function(data){
+	console.log(2)
 	if(data.val() && vm.player)
 		{
 			vm.player.playVideo();
@@ -37,9 +39,11 @@ Database.ref("rooms/" + vm.name + "/status").on("value", function(data){
 });
 
 $scope.$on('youtube.player.ready', function ($event, player) {
+	console.log(3)
 		vm.player = player;
 
 		Database.ref("rooms/" + vm.name + "/songs").on("value", function(data){
+			console.log(4)
 			vm.songs = data.val();
 			vm.src = vm.songs[Object.keys(vm.songs)[0]].url;
 			player.playVideo();
