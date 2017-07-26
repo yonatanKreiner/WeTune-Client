@@ -13,11 +13,11 @@
 .room-details{
 	background: white;
 	height: 20vh;
-	width: 65vw;
+	width: 25vw;
 	padding: 2%;
 	font-size: 20px;
 	direction: rtl;
-	color: black;
+	color: black
 }
 
 .songs{
@@ -25,17 +25,17 @@
 	overflow-y:auto;
 	float: left;
 	height: 100vh;
-	padding: 2px;;
-	border: 2px solid gray;
+	padding: 3px;;
+	border: 1px solid gray;
 	width: 35vw;
 }
 
-.song{
-	height: 150px;
-	padding: 1%;
-}
-.song-name{
-	font-size: 20px;
+.card{
+	padding: 10px 15px 10px 4px;
+	background: black;
+	max-height: 170px;
+	border: 1px solid gray;
+	opacity: 0.8;
 }
 
 .thumb{
@@ -45,7 +45,6 @@
 }
 
 .youtube{
-	float: right;
 	position: absolute;
 	right: 0;
 	top: 0;
