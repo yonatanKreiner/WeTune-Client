@@ -56,15 +56,16 @@
 .room-details{
 	float: right;
 	margin: 0 !important;
-	margin-right: 120px !important;
-	margin-top: 50px !important;
-	font-size: 70px;
+	margin-right: 4vw !important;
+	margin-top: 10vh !important;
+	font-size: 6vh;
 	direction: rtl;
 	color: white
 }
 
 #qr {
-	margin-top: 50px;
-	margin-left: 50px;
+	margin-top: 3vh;
+	margin-left: 3vw;
 	float: left;
+	transform: scale(0.8)
 }
