@@ -14,10 +14,10 @@ angular.module('weTuneApp')
 	// 	$location.path('/');
 	// 	if(!$scope.$$phase) $scope.$apply();
 	// }
-	vm.name = "pulse";
-	vm.pin = "1234";
-	//vm.name = RoomService.name;
-	//vm.pin = RoomService.pin;
+	//vm.name = "pulse";
+	//vm.pin = "1234";
+	vm.name = RoomService.name;
+	vm.pin = RoomService.pin;
 	vm.src = "XIMLoLxmTDw";
 
 	
