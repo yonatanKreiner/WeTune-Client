@@ -9,13 +9,6 @@
  */
 angular.module('weTuneApp')
   .controller('LoginCtrl', function ($scope, $location, Database, RoomService) {
-		// $('#inputPin').pincodeInput({inputs:4});
-		// function moveOnMax(field, nextFieldID) {
-		// 	if (field.value.length == 1) {
-		// 			document.getElementById(nextFieldID).focus();
-		// 	}
-		// }
-
 		var defaultRoom = {
 			name: '',
 			pin: '',
